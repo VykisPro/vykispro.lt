@@ -22,3 +22,18 @@ justify-content: space-evenly;}
 flex-flow:row nowrap;
 justify-content: space-between;}
 .header > nav > img {height: 3rem;}
+
+.login {margin-top:100px;}
+.register {margin-top:100px;}
+
+.registerForm{display:flex;
+flex-flow:column nowrap;
+max-width: 500px;
+margin:0 auto;}
+
+.loginForm{display:flex;
+  flex-flow:column nowrap;
+  max-width: 500px;
+  margin:0 auto;}
+
+

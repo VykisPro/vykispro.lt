@@ -1,22 +1,32 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
+    const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log({ email, password });
+        console.log({ username, email, password });
         setEmail("");
+        setUsername("");
         setPassword("");
     };
-
     return (
-        <main className='login'>
-            <h1 className='loginTitle'>Prisijungti į paskyrą</h1>
-            <form className='loginForm' onSubmit={handleSubmit}>
-                <label htmlFor='email'>Elektroninis paštas:</label>
+        <main className='register'>
+            <h1 className='registerTitle'>Sukurti naują vartotoją</h1>
+            <form className='registerForm' onSubmit={handleSubmit}>
+                <label htmlFor='username'>Prisijungimo vardas:</label>
+                <input
+                    type='text'
+                    name='username'
+                    id='username'
+                    required
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+                <label htmlFor='email'>Elektroninio pašto adresas:</label>
                 <input
                     type='text'
                     name='email'
@@ -34,12 +44,13 @@ const Login = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <button className='loginBtn'>PRISIJUNGTI</button>
+                <button className='registerBtn'>Sukurti paskyrą</button>
                 <p>
-                   Neturite aktyvios paskyros? <Link to='/register'>Užregistruoti vartotojo paskyrą</Link>
+                    Jau esate susikūrę vartotoją? <Link to='/Login'>Prisijungti</Link>
                 </p>
             </form>
         </main>
     );
 };
-export default Login;
+
+export default Register;
