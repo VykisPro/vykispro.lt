@@ -1,13 +1,15 @@
+import { NavLink } from 'react-router-dom';
+
 function Header() {
     return (
         <div className="header">
            <nav>
             <img src="https://i.pinimg.com/236x/60/33/29/603329a4f06ead834eba10bd7913e084.jpg" alt="logo"></img>
             <ul>
-              <li><a href="http://localhost:3000/Home">Pagrinidis </a></li>
-              <li>Prisijungti</li>
-              <li>Registruotis</li>
-              <li>Apie mus</li>
+              <li> <NavLink to="/">Pagrindinis</NavLink></li>
+              <li> <NavLink to="/login">Prisijungti</NavLink></li>
+              <li> <NavLink to="/Register">Registruotis</NavLink></li>
+              <li> <NavLink to="/">Apie puslapį</NavLink></li>
             </ul>
            </nav>
         </div>
