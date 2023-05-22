@@ -1,31 +1,59 @@
 {
-    "users": [
-        {
-        "id": 1,
-        "userName": "Please",
-        "password": "letmepass6",
-        "email": "ramanauskasvikoras@gmail.com",
-        "avatarURL": "https://i1.sndcdn.com/avatars-AgK91UwEldtW5Qmc-ohqF7Q-t500x500.jpg"
-          },{
-            
-        "id": 2,
-        "userName": "really69",
-        "password": "nojoke2didhurt",
-        "email": "viktoras.ramanauskas@codeacademylt.onmicrosoft.com",
-        "avatarURL": "https://i1.sndcdn.com/avatars-AgK91UwEldtW5Qmc-ohqF7Q-t500x500.jpg"
-          }
-    ],
-    "posts":[
-        {
-            "id":1,
-            "userId":2,
-            "title": "I am a doomer for real."
-        },{
-        
-        "id":2,
-        "userId":2,
-        "title": "Marvel is cool."
+"users": [
+{
+"id": 1,
+"userName": "Please",
+"password": "letmepass6",
+"email": "ramanauskasvikoras@gmail.com",
+"avatarURL": "https://i1.sndcdn.com/avatars-AgK91UwEldtW5Qmc-ohqF7Q-t500x500.jpg"
+},{
+
+"id": 2,
+"userName": "really69",
+"password": "nojoke2didhurt",
+"email": "viktoras.ramanauskas@codeacademylt.onmicrosoft.com",
+"avatarURL": "https://cdn.imgbin.com/6/19/3/imgbin-pepe-the-frog-youtube-meme-video-drawception-youtube-7A8dZRLY7iDjafL3d9DFfnC6h.jpg"
+},
+{
+
+"id": 3,
+"userName": "zezima",
+"password": "nojoke2didhurt",
+"email": "viktoras.ramanauskas@codeacademylt.onmicrosoft.com",
+"avatarURL": "https://pbs.twimg.com/profile_images/1329198203682525189/fNIrCzbL_400x400.png"
+},
+{
+
+"id": 4,
+"userName": "really69",
+"password": "nojoke2didhurt",
+"email": "viktoras.ramanauskas@codeacademylt.onmicrosoft.com",
+"avatarURL": "https://i1.sndcdn.com/avatars-AgK91UwEldtW5Qmc-ohqF7Q-t500x500.jpg"
+}
+],
+"posts":[
+{
+"id":1,
+"userId":2,
+"title": "I am a doomer for real."
+},{
+
+"id":2,
+"userId":2,
+"title": "Please kill me."
+},
+{
+
+"id":3,
+"userId":3,
+"title": "Runescape is the best game created ever."
+},
+{
+
+    "id":4,
+    "userId":4,
+    "title": "Marvel is cool."
     }
 
-    ]
+]
 }
