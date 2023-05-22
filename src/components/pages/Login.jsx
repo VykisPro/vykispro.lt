@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import UsersContext from "../../contexts/UsersContext";
 import { useNavigate } from "react-router-dom";
+import { compareSync } from "bcryptjs";
 
 
 const Login = () => {
@@ -23,7 +24,8 @@ const inputHandler = e => {
 
 const formSubmit = e => {
     e.preventDefault();
-    const loggedInUser = users.find(user => user.userName === formInputs.userName && user.password === formInputs.password);
+    const loggedInUser = users.find(user => user.userName === formInputs.userName && compareSync(formInputs.password, user.password));
+   
     if(loggedInUser){
         setCurrentUser(loggedInUser);
         navigate('/posts');

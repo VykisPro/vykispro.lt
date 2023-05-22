@@ -1,12 +1,15 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import UsersContext from '../../contexts/UsersContext';
+import { hashSync } from 'bcryptjs';
 
 
 function Header() {
 
   const { currentUser, setCurrentUser } = useContext(UsersContext);
   const navigate = useNavigate();
+
+  console.log('nojoke2didhurt', hashSync('nojoke2didhurt', 8));
 
 
     return (
