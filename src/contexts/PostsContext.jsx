@@ -14,7 +14,7 @@ const reducer = (state, action) => {
     }
 }
 
-const PostsProvider = ({ children}) => {
+const PostsProvider = ({ children }) => {
 
     const [posts, setPosts] =useReducer(reducer, []);
     useEffect(() => {

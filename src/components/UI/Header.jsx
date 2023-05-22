@@ -10,11 +10,11 @@ function Header() {
               <li> <NavLink to="/login">Prisijungti</NavLink></li>
               <li> <NavLink to="/Register">Registruotis</NavLink></li>
               <li> <NavLink to="/Posts">Visi Postai</NavLink></li>
-            </ul>
-           </nav>
-           <div className='userInfo'>
+              <div className='userInfo'>
             User
            </div>
+            </ul>
+           </nav>
         </div>
     )
 }
