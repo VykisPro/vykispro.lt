@@ -9,9 +9,6 @@ function Header() {
   const { currentUser, setCurrentUser } = useContext(UsersContext);
   const navigate = useNavigate();
 
-  console.log('nojoke2didhurt', hashSync('nojoke2didhurt', 8));
-
-
     return (
         <div className="header">
            <nav>

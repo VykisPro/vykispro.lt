@@ -29,7 +29,7 @@ const formSubmit = e => {
     if(loggedInUser){
         setCurrentUser(loggedInUser);
         navigate('/posts');
-    } else {
+    } else { 
         setFailedLogIn(true);
     }
 }

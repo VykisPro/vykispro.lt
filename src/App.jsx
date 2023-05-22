@@ -12,6 +12,7 @@ import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 import AllPosts from './components/pages/AllPosts';
 import UserPage from './components/pages/UserPage';
+import NewPost from './components/pages/NewPost';
 
 
 
@@ -30,6 +31,10 @@ function App() {
       <Route path="/posts" element={<AllPosts />} />
       <Route path="/userPage" element={currentUser ?
       <UserPage />:
+      <Navigate to='/login' />
+      } />
+        <Route path="/newPost" element={currentUser ?
+      <NewPost />:
       <Navigate to='/login' />
       } />
     </Routes>
