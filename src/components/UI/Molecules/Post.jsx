@@ -13,7 +13,7 @@ display:flex;
 align-items:center;
 gap:20px;
 >img{
-    with:50px;
+    width:50px;
     height:50px;
     border-radius:50%;
 }`

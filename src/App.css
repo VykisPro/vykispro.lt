@@ -5,23 +5,31 @@ p { color: red;}
 
 .header ul {display: flex;
 flex-flow:row nowrap;
-gap: 1rem;
+gap: 5rem;
 list-style: none;
 justify-content: space-evenly;}
 
 .header {
+display: flex;
   position: fixed;
-  height: 3rem;
+  height: 7rem;
   width: 100%;
   top:0;
-  background-color: aqua;}
+  background-color: aqua;
+justify-content: space-evenly;
+padding:0 20px;
+align-items: center;}
 
 .home {margin-top:4rem;}
 
 .header > nav{display: flex;
-flex-flow:row nowrap;
-justify-content: space-between;}
-.header > nav > img {height: 3rem;}
+  flex-flow:row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap:200px;
+}
+
+.header > nav > img {height: 110px;}
 
 .login {margin-top:100px;}
 .register {margin-top:100px;}
@@ -39,4 +47,13 @@ margin:0 auto;}
 
 .allPosts {margin-top:200px;}
 
-.userInfo {margin-right:20px;}
+#login {margin-top:300px;}
+
+.userInfo > img {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+}
+
+.userInfo {display:flex;
+gap:5px;}

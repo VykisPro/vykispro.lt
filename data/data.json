@@ -2,8 +2,8 @@
 "users": [
 {
 "id": 1,
-"userName": "Please",
-"password": "letmepass6",
+"userName": "admin",
+"password": "admin",
 "email": "ramanauskasvikoras@gmail.com",
 "avatarURL": "https://i1.sndcdn.com/avatars-AgK91UwEldtW5Qmc-ohqF7Q-t500x500.jpg"
 },{

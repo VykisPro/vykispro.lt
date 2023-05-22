@@ -18,7 +18,7 @@ function App() {
   <main>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/error_404" element={<NotFound />} />
+      <Route path="/*" element={<NotFound />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/posts" element={<AllPosts />} />
