@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom/client';
 import 'normalize.css';
 import './index.css';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import { PostsProvider } from './contexts/PostsContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-    <React.StrictMode>
+    <PostsProvider>
+     
     <App />
-  </React.StrictMode>
+
+    </PostsProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

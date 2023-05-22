@@ -1,0 +1,31 @@
+{
+    "users": [
+        {
+        "id": 1,
+        "userName": "Please",
+        "password": "letmepass6",
+        "email": "ramanauskasvikoras@gmail.com",
+        "avatarURl": "https://i1.sndcdn.com/avatars-AgK91UwEldtW5Qmc-ohqF7Q-t500x500.jpg"
+          },{
+            
+        "id": 1,
+        "userName": "really",
+        "password": "nojoke2didhurt",
+        "email": "viktoras.ramanauskas@codeacademylt.onmicrosoft.com",
+        "avatarURL": "https://i1.sndcdn.com/avatars-AgK91UwEldtW5Qmc-ohqF7Q-t500x500.jpg"
+          }
+    ],
+    "posts":[
+        {
+            "id":1,
+            "userId":2,
+            "title": "I am a doomer for real."
+        },{
+        
+        "id":2,
+        "userId":2,
+        "title": "Marvel is cool."
+    }
+
+    ]
+}

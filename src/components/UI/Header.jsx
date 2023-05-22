@@ -9,9 +9,12 @@ function Header() {
               <li> <NavLink to="/">Pagrindinis</NavLink></li>
               <li> <NavLink to="/login">Prisijungti</NavLink></li>
               <li> <NavLink to="/Register">Registruotis</NavLink></li>
-              <li> <NavLink to="/">Apie puslapį</NavLink></li>
+              <li> <NavLink to="/Posts">Visi Postai</NavLink></li>
             </ul>
            </nav>
+           <div className='userInfo'>
+            User
+           </div>
         </div>
     )
 }
