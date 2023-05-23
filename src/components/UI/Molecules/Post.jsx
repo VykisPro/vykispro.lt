@@ -25,6 +25,7 @@ const { users, currentUser } = useContext(UsersContext);
 const { setPosts, PostsActionTypes } = useContext(PostsContext);
 const user = users.find(a => a.id === data.userId);
 
+
     return (
         <StyledPostDiv>
             {
