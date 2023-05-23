@@ -43,6 +43,22 @@
       "password": "$2a$10$7MbJsGcUF4GLIrQ26lxK/.2pCZle32ujmd5gWTm.dscpDrnFiguAG",
       "age": 27,
       "id": 6
+    },
+    {
+      "email": "sadas@gmail.com",
+      "userName": "what",
+      "avatarURL": "https://cdn.cloudflare.steamstatic.com/steam/apps/1529730/capsule_616x353.jpg?t=1615553857",
+      "password": "$2a$10$U7ODrqNDQJOcWes51jg1U.X8IoU3V6ipe2.MEyZedTVEfxFwhr2HG",
+      "age": 20,
+      "id": 7
+    },
+    {
+      "email": "ltlt@lt.lt",
+      "userName": "ltu",
+      "avatarURL": "https://cdn.cloudflare.steamstatic.com/steam/apps/1529730/capsule_616x353.jpg?t=1615553857",
+      "password": "$2a$10$fD8mSOZbr3R0IgKzzFX0Le69ppm/p1TnM.q6aEvIwiMHEyVJvPuue",
+      "age": 15,
+      "id": 8
     }
   ],
   "posts": [
