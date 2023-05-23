@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useContext } from 'react';
 import UsersContext from '../../../contexts/UsersContext';
+import PostsContext from '../../../contexts/PostsContext';
 
 const StyledPostDiv = styled.div`
 border:1px solid black;
@@ -18,14 +19,22 @@ gap:20px;
     border-radius:50%;
 }`
 
-
 const Post = ({ data }) => {
 
-const { users } = useContext(UsersContext);
+const { users, currentUser } = useContext(UsersContext);
+const { setPosts, PostsActionTypes } = useContext(PostsContext);
 const user = users.find(a => a.id === data.userId);
 
     return (
         <StyledPostDiv>
+            {
+              currentUser && data.userId === currentUser.id &&
+                <button onClick={ () => setPosts({
+                    type: PostsActionTypes.delete,
+                    id: data.id 
+                }) }
+                >Ištrinti klausimą</button>
+            }
             { users.length ?
              <StyledUserInfoDiv>
                 <img src={user.avatarURL} alt="Paskyros avataras" />
