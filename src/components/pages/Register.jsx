@@ -1,10 +1,13 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { hashSync } from "bcryptjs";
+import UsersContext from "../../contexts/UsersContext";
 
 const Register = () => {
+  const navigate = useNavigate();
+  const { setCurrentUser } = useContext(UsersContext);
 
 const values = {
 email: '',
@@ -31,6 +34,8 @@ body: JSON.stringify(newUser),
 
 if (response.ok) {
 console.log("Vartotojas sėkmingai sukurtas!");
+setCurrentUser(newUser);
+navigate('/userposts');
 } else {
 console.error(
 "Registracija nepavyko:",
@@ -104,8 +109,8 @@ onChange={formik.handleChange}
 onBlur={formik.handleBlur}
 />
 {
-formik.touched.email && formik.errors.email &&
-<span className="error">{formik.errors.email}</span>
+    formik.touched.email && formik.errors.email &&
+    <span className="error">{formik.errors.email}</span>
 }
 </div>
 <div>
@@ -118,8 +123,8 @@ onChange={formik.handleChange}
 onBlur={formik.handleBlur}
 />
 {
-formik.touched.userName && formik.errors.userName &&
-<span className="error">{formik.errors.userName}</span>
+    formik.touched.userName && formik.errors.userName &&
+    <span className="error">{formik.errors.userName}</span>
 }
 </div>
 <div>
@@ -132,8 +137,8 @@ onChange={formik.handleChange}
 onBlur={formik.handleBlur}
 />
 {
-formik.touched.avatarURL && formik.errors.avatarURL &&
-<span className="error">{formik.errors.avatarURL}</span>
+    formik.touched.avatarURL && formik.errors.avatarURL &&
+    <span className="error">{formik.errors.avatarURL}</span>
 }
 </div>
 <div>
@@ -146,8 +151,8 @@ onChange={formik.handleChange}
 onBlur={formik.handleBlur}
 />
 {
-formik.touched.age && formik.errors.age &&
-<span className="error">{formik.errors.age}</span>
+    formik.touched.age && formik.errors.age &&
+    <span className="error">{formik.errors.age}</span>
 }
 </div>
 <div>
@@ -160,8 +165,8 @@ onChange={formik.handleChange}
 onBlur={formik.handleBlur}
 />
 {
-formik.touched.password && formik.errors.password &&
-<span className="error">{formik.errors.password}</span>
+    formik.touched.password && formik.errors.password &&
+    <span className="error">{formik.errors.password}</span>
 }
 </div>
 <div>
@@ -174,8 +179,8 @@ onChange={formik.handleChange}
 onBlur={formik.handleBlur}
 />
 {
-formik.touched.passwordConfirm && formik.errors.passwordConfirm &&
-<span className="error">{formik.errors.passwordConfirm}</span>
+    formik.touched.passwordConfirm && formik.errors.passwordConfirm &&
+    <span className="error">{formik.errors.passwordConfirm}</span>
 }
 </div>
 <input type="submit" value="Sukurti paskyrą" />

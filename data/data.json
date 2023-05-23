@@ -27,6 +27,22 @@
       "password": "$2a$08$SPWEJO69EWCaHcB0LF2OHek0AD5NM.Bmisg0ry1hd4WeBXINe6unO",
       "email": "viktoras.ramanauskas@codeacademylt.onmicrosoft.com",
       "avatarURL": "https://i1.sndcdn.com/avatars-AgK91UwEldtW5Qmc-ohqF7Q-t500x500.jpg"
+    },
+    {
+      "email": "a@a.lt",
+      "userName": "lolas",
+      "avatarURL": "https://cdn.cloudflare.steamstatic.com/steam/apps/1529730/capsule_616x353.jpg?t=1615553857",
+      "password": "$2a$10$Lo1Hcc0XovQy1EOO3t48POVi9jPsp0WNYmrVDBDav2wU/J.nO6k5O",
+      "age": 27,
+      "id": 5
+    },
+    {
+      "email": "aa@a.lt",
+      "userName": "lolas1",
+      "avatarURL": "https://cdn.cloudflare.steamstatic.com/steam/apps/1529730/capsule_616x353.jpg?t=1615553857",
+      "password": "$2a$10$7MbJsGcUF4GLIrQ26lxK/.2pCZle32ujmd5gWTm.dscpDrnFiguAG",
+      "age": 27,
+      "id": 6
     }
   ],
   "posts": [
