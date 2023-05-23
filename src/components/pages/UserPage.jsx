@@ -11,9 +11,8 @@ const { currentUser } = useContext(UsersContext);
 
 return (
 <main>
-<h1>{currentUser.userName} Posts</h1>
-<h1>{currentUser.userName} Posts</h1>
-<h1>{currentUser.userName} Posts</h1>
+<div className="pageContainer">
+
 <h1>{currentUser.userName} Posts</h1>
 <Link to="/newPost">
     <button>Pridėti naują klausimą</button>
@@ -28,6 +27,7 @@ return (
                 />
         )
     }
+</div>
 </div>
 </main>
     );
