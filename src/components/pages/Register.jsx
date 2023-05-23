@@ -35,7 +35,7 @@ body: JSON.stringify(newUser),
 if (response.ok) {
 console.log("Vartotojas sėkmingai sukurtas!");
 setCurrentUser(newUser);
-navigate('/userposts');
+navigate('/posts');
 } else {
 console.error(
 "Registracija nepavyko:",

@@ -8,7 +8,6 @@ const AllPosts = () => {
 const { posts } = useContext(PostsContext);
 const { currentUser } = useContext(UsersContext);
 
-
 return (
 <div className='allPosts'>
     {
