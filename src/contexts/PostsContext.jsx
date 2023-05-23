@@ -3,7 +3,8 @@ import { createContext, useReducer, useEffect } from "react";
 const PostsContext = createContext();
 const PostsActionTypes ={
     get: 'get_all_posts',
-    add: 'add_new_post'
+    add: 'add_new_post',
+    delete: 'remove_specific_post'
 }
 
 const reducer = (state, action) => {
@@ -18,6 +19,11 @@ const reducer = (state, action) => {
                 body: JSON.stringify(action.data)
             });
             return [ ...state, action.data ];
+            case PostsActionTypes.delete:
+                fetch(`http://localhost:3000/posts/${action.id}`, 
+                {method: "DELETE",
+            });
+            return state.filter(el => el.id !==action.id);
             default:
                 return state;
     }
