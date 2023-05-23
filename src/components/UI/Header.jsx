@@ -4,6 +4,7 @@ import UsersContext from '../../contexts/UsersContext';
 import { hashSync } from 'bcryptjs';
 
 
+
 function Header() {
 
   const { currentUser, setCurrentUser } = useContext(UsersContext);

@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Formik, Form, Field } from 'formik';
+import * as Yup from 'yup';
 
 const Register = () => {
+
+    const values = {
+        email: '',
+        userName: '',
+        avatarURL: '',
+        password: '',
+        passwordConfim: ''
+    }
+
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -14,7 +25,7 @@ const Register = () => {
         setPassword("");
     };
     return (
-        <main className='register'>
+        <main className='pageContainer'>
             <h1 className='registerTitle'>Sukurti naują vartotoją</h1>
             <form className='registerForm' onSubmit={handleSubmit}>
                 <label htmlFor='username'>Prisijungimo vardas:</label>

@@ -5,9 +5,10 @@ p { color: red;}
 
 .header ul {display: flex;
 flex-flow:row nowrap;
-gap: 5rem;
+gap: 10rem;
 list-style: none;
 justify-content: space-evenly;}
+
 
 .header {
 display: flex;
@@ -19,6 +20,7 @@ display: flex;
 justify-content: space-evenly;
 padding:0 20px;
 align-items: center;}
+
 
 .home {margin-top:4rem;}
 
@@ -59,3 +61,9 @@ margin:0 auto;}
 gap:5px;}
 
 .pageContainer {margin-top:200px;}
+
+a{
+  text-decoration: none;
+  color:green;
+  font-size: 20px;
+}
