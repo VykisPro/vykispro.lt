@@ -1,7 +1,7 @@
-import React, { useContext, useState, useEffect } from 'react';
-import styled from 'styled-components';
-import UsersContext from '../../../contexts/UsersContext';
-import PostsContext from '../../../contexts/PostsContext';
+import React, { useContext, useState, useEffect } from "react";
+import styled from "styled-components";
+import UsersContext from "../../../contexts/UsersContext";
+import PostsContext, { PostsActionTypes } from "../../../contexts/PostsContext";
 
 const StyledPostDiv = styled.div`
   border: 1px solid black;
@@ -22,46 +22,88 @@ const StyledUserInfoDiv = styled.div`
   }
 `;
 
+const EditedIndicator = styled.span`
+  color: red;
+  font-weight: bold;
+`;
+
 const Post = ({ data }) => {
-  const { users, currentUser } = useContext(UsersContext);
-  const { setPosts, PostsActionTypes } = useContext(PostsContext);
-  const [isLoadingUser, setIsLoadingUser] = useState(true);
-  const [user, setUser] = useState(null);
+  const { users, currentUser, isLoading } = useContext(UsersContext);
+  const { setPosts } = useContext(PostsContext);
+  const user = users.find((user) => user.id === data.userId);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedTitle, setEditedTitle] = useState(data.title);
 
   useEffect(() => {
-    const foundUser = users.find((user) => user.id === data.userId);
-    if (foundUser) {
-      setUser(foundUser);
-      setIsLoadingUser(false);
+    setEditedTitle(data.title);
+  }, [data.title]);
+
+  const handleEdit = () => {
+    if (isEditing) {
+      const editedPost = {
+        ...data,
+        title: editedTitle,
+        edited: true,
+        timestamp: new Date().toLocaleString(),
+      };
+      setPosts({
+        type: PostsActionTypes.edit,
+        data: editedPost,
+      });
     }
-  }, [users, data.userId]);
+    setIsEditing(!isEditing);
+  };
+
+  const handleTitleChange = (e) => {
+    setEditedTitle(e.target.value);
+  };
+
+  const isCurrentUserPostOwner = currentUser && data.userId === currentUser.id;
+
+  if (isLoading || !user) {
+    return <p>Loading user...</p>;
+  }
 
   return (
     <StyledPostDiv>
-      {currentUser && data.userId === currentUser.id && (
-        <button
-          onClick={() =>
-            setPosts({
-              type: PostsActionTypes.delete,
-              id: data.id,
-            })
-          }
-        >
-          Ištrinti klausimą
-        </button>
+      {isCurrentUserPostOwner && (
+        <>
+          <button onClick={handleEdit}>{isEditing ? "Save" : "Edit"}</button>
+          <button
+            onClick={() =>
+              setPosts({
+                type: PostsActionTypes.delete,
+                id: data.id,
+              })
+            }
+          >
+            Ištrinti klausimą
+          </button>
+        </>
       )}
-      {isLoadingUser ? (
-        <p> Vartotojas kraunamas, prieš keliant post perkrauti puslapį ir  prisijungti iš naujo </p>
-      ) : user ? (
-        <StyledUserInfoDiv>
-          <img src={user.avatarURL} alt="Paskyros avataras" />
-          <p>{user.userName}</p>
-        </StyledUserInfoDiv>
-      ) : (
-        <p> Vartotojas nerastas </p>
-      )}
+      <StyledUserInfoDiv>
+        <img src={user.avatarURL} alt="Paskyros avataras" />
+        <p>{user.userName}</p>
+      </StyledUserInfoDiv>
       <div>
-        <h3>{data.title}</h3>
+        {isEditing ? (
+          <input
+            type="text"
+            name="title"
+            value={editedTitle}
+            onChange={handleTitleChange}
+          />
+        ) : (
+          <h3>
+            {isCurrentUserPostOwner && data.edited && (
+              <EditedIndicator> </EditedIndicator>
+            )}
+            {data.title}
+          </h3>
+        )}
+        {isCurrentUserPostOwner && data.edited && (
+          <p>Koreguota: {data.editedTimestamp}</p>
+        )}
       </div>
     </StyledPostDiv>
   );

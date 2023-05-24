@@ -5,7 +5,8 @@ import './index.css';
 import App from './App';
 import { PostsProvider } from './contexts/PostsContext';
 import { UsersProvider } from './contexts/UsersContext';
-import NotFound from './components/pages/NotFound';
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

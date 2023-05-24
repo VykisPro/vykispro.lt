@@ -17,7 +17,7 @@ const reducer = (state, action) => {
 const UsersProvider = ({ children }) => {
   const [users, setUsers] = useReducer(reducer, []);
   const [currentUser, setCurrentUser] = useState(null);
-  const [isUsersLoaded, setIsUsersLoaded] = useState(false); // New state variable for users loaded status
+  const [isUsersLoaded, setIsUsersLoaded] = useState(false); 
 
   useEffect(() => {
     fetch('http://localhost:3000/users')
@@ -27,7 +27,7 @@ const UsersProvider = ({ children }) => {
           type: UsersActionTypes.get,
           data: data
         });
-        setIsUsersLoaded(true); // Set isUsersLoaded to true after setting users data
+        setIsUsersLoaded(true); 
       });
   }, []);
 
@@ -41,7 +41,7 @@ const UsersProvider = ({ children }) => {
         setCurrentUser
       }}
     >
-      {isUsersLoaded ? ( // Check if users data is loaded before rendering children
+      {isUsersLoaded ? ( 
         children
       ) : (
         <p>Vartotojai kraunami...</p>

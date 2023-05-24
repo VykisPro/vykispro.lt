@@ -13,6 +13,7 @@ import Register from './components/pages/Register';
 import AllPosts from './components/pages/AllPosts';
 import UserPage from './components/pages/UserPage';
 import NewPost from './components/pages/NewPost';
+import Footer from './components/UI/Footer';
 
 
 
@@ -38,6 +39,7 @@ function App() {
       <Navigate to='/login' />
       } />
     </Routes>
+  <Footer />
 </BrowserRouter>
   );
 }
