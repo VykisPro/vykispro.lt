@@ -16,8 +16,8 @@ function Header() {
             <img src="https://i.pinimg.com/236x/60/33/29/603329a4f06ead834eba10bd7913e084.jpg" alt="logo"></img>
             <ul>
               <li> <NavLink to="/">Pagrindinis</NavLink></li>
-              <li> <NavLink to="/login">Populiariausios temos</NavLink></li>
-              <li> <NavLink to="/register">Papildoma informacija</NavLink></li>
+              <li> <NavLink to="/login"></NavLink></li>
+              <li> <NavLink to="/register"></NavLink></li>
               <li> <NavLink to="/posts">Visi Postai</NavLink></li>
               </ul>
               <div className='userInfo'>

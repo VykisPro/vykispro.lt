@@ -1,8 +1,9 @@
 export default function Home() {
     return (
-        <div className="home">
-            <h1>PAGRINDINIS PUSLAPIS</h1>
-            <p> cia turetu buti postai</p>
+        <div className="pageContainer">
+            <h1>Trumpai apie puslapį:</h1>
+            
+            <p> Autorius labai tikisi teigiamo įvertinimo.</p>
         </div>
     )
 }

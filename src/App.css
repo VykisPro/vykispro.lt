@@ -57,7 +57,7 @@ p {
 .registerForm {
   display: flex;
   flex-flow: column nowrap;
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -75,7 +75,7 @@ p {
   border: none;
   border-radius: 5px;
   margin-bottom: 10px;
-  box-sizing: border-box; /* Add this property */
+  box-sizing: border-box;
 }
 
 .allPosts {
